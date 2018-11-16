@@ -1,0 +1,26 @@
+//Style header 
+.dashboard__header {
+	height: 56px;
+	.dashboard__header_brand {
+		height: 56px;
+		h2 {
+			padding: 0.6rem 1rem;
+		}
+	}
+	.dashboard__header_navigation {
+		height: 56px;
+		ul {
+			padding: 0.6rem 0rem;
+		} 
+	}
+}
+
+
+
+// Syle content
+.dashboard__content {
+	.dashboard__content_sidebar {
+		height: 91vh;
+		background-color: #f8f8f8;
+	}
+}
