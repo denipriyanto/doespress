@@ -1,26 +1,113 @@
+// Variable
+$c_red : #DB1936;
+$c_dark : #1E1E21;
+
+html, body {
+	height: 100%;
+	overflow-x: hidden;
+}
+
+section.dashboard {
+	height: 100%;
+}
+
 //Style header 
 .dashboard__header {
-	height: 56px;
-	.dashboard__header_brand {
-		height: 56px;
-		h2 {
-			padding: 0.6rem 1rem;
+	display: flex;
+	width: 100%;
+	padding: 0;
+	background-color: $c_dark;
+	.dashboard__header_trigger_menu {
+		background-color: $c_red;
+		text-align: right;
+		display: flex;
+		flex: 0 0 250px;
+		width: 250px;
+		justify-content: space-between;
+		align-items: center;
+		.dashboard__brand {
+			color: #fff;
+			font-size: 1.5rem;
+			text-transform: uppercase;
+			padding-left: 0.9rem;
+		}
+		.dashboard__logo {
+			padding: 1rem 0.9rem;
 		}
 	}
+	// .dashboard__header_brand {
+	// 	width: 50%;
+	// 	display: flex;
+	// 	.dashboard__brand {
+	// 		color: #fff;
+	// 		font-size: 1.9rem;
+	// 		text-transform: uppercase;
+	// 		padding-left: 0.9rem;
+
+	// 	}
+	// }
 	.dashboard__header_navigation {
-		height: 56px;
-		ul {
-			padding: 0.6rem 0rem;
-		} 
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: flex-end;
+		.dashboard__navigation {
+			margin-right: 0.9rem;
+			a.nav-link {
+				color: #fff;
+				padding: .5rem .3em;
+			}
+			.dropdown-item {
+				padding: 0.25em 1em;
+				font-size: 0.9rem;
+			}
+			.dropdown-toggle::after {
+				margin-left: 0.8em;
+				border-top: .4em solid;
+			    border-right: .4em solid transparent;
+			    border-left: .4em solid transparent;
+			}
+		}
 	}
 }
 
 
 
 // Syle content
-.dashboard__content {
+.dashboard__content_wrapper {
+	display: flex;
+	padding: 0;
+	width: 100%;
+	height: calc(100% - 56px);
 	.dashboard__content_sidebar {
-		height: 91vh;
-		background-color: #f8f8f8;
+		height: 100%;
+		background-color: $c_dark;
+		width: 250px;
+		position: fixed;
+		.dahsboard__content_main_menu {
+			.list-group {
+				.list-group-item {
+					background-color: $c_dark;
+				}
+			}
+		}
 	}
+	.dashboard__content_main {
+		padding-left: 250px;
+		width: 100%;
+		.page__content {
+			display: flex;
+			min-height: 100%;
+			align-items: stretch;
+			.page__content_menu {
+				flex: 0 0 351px;
+			    width: 351px;
+				border-right: 0.5px solid $c_dark;
+			}
+			.page__content_main {
+				width: 100%;
+			}
+		}
+	}
+	
 }
