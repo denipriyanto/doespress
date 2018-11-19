@@ -1,0 +1,106 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {{ controller_name }}!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="page__content_menu py-4 px-4">
+	<a href="/article/new" class="btn btn-outline-primary btn-sm px-4">ADD NEW ARTICLE</a>
+</div>
+<div class="page__content_main p-4">
+	<div>
+		<table class="table table-hover">
+			<thead class="thead-light">
+				<tr>
+					<th scope="col">Title</th>
+					<th scope="col">Author</th>
+					<th scope="col">Categories</th>
+					<th scope="col">Date</th>
+					<th scope="col">Action</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr>
+					<th>Doespress 1</th>
+					<td>Mark</td>
+					<td>learn</td>
+					<td>2018/09/24</td>
+					<td width="200px">
+						<span class="badge badge-pill badge-primary">view</span>
+						<span class="badge badge-pill badge-success"><a href="/article/edit">edit</a></span>
+						<span class="badge badge-pill badge-danger">delete</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">Doespress 1</th>
+					<td>Mark</td>
+					<td>learn</td>
+					<td>2018/09/24</td>
+					<td width="200px">
+						<span class="badge badge-pill badge-primary">view</span>
+						<span class="badge badge-pill badge-success"><a href="/article/edit">edit</a></span>
+						<span class="badge badge-pill badge-danger">delete</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">Doespress 2</th>
+					<td>Ahok</td>
+					<td>politic</td>
+					<td>2018/09/24</td>
+					<td width="200px">
+						<span class="badge badge-pill badge-primary">view</span>
+						<span class="badge badge-pill badge-success"><a href="/article/edit">edit</a></span>
+						<span class="badge badge-pill badge-danger">delete</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">Doespress 3</th>
+					<td>Hoppus</td>
+					<td>music</td>
+					<td>2018/09/24</td>
+					<td width="200px">
+						<span class="badge badge-pill badge-primary">view</span>
+						<span class="badge badge-pill badge-success"><a href="/article/edit">edit</a></span>
+						<span class="badge badge-pill badge-danger">delete</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">Doespress 4</th>
+					<td>Joe</td>
+					<td>music</td>
+					<td>2018/09/24</td>
+					<td width="200px">
+						<span class="badge badge-pill badge-primary">view</span>
+						<span class="badge badge-pill badge-success"><a href="/article/edit">edit</a></span>
+						<span class="badge badge-pill badge-danger">delete</span>
+					</td>
+				</tr>
+				<tr>
+					<th scope="row">Doespress 1</th>
+					<td>John</td>
+					<td>text</td>
+					<td>2018/09/24</td>
+					<td width="180px">
+						<span class="badge badge-pill badge-primary">view</span>
+						<span class="badge badge-pill badge-success"><a href="/article/edit">edit</a></span>
+						<span class="badge badge-pill badge-danger">delete</span>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+
+		<!-- <h1>Hello {{ controller_name }}! ✅</h1>
+
+		This friendly message is coming from:
+		<ul>
+		    <li>Your controller at <code><a href="{{ 'src/Controller/ArticleController.php'|file_link(0) }}">src/Controller/ArticleController.php</a></code></li>
+		    <li>Your template at <code><a href="{{ 'templates/article/index.html.twig'|file_link(0) }}">templates/article/index.html.twig</a></code></li>
+		</ul> -->
+
+	</div>
+</div>
+{% endblock %}

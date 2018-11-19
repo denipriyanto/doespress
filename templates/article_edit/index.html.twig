@@ -1,0 +1,89 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello {{ controller_name }}!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+</style>
+
+<div class="article-new-wrapper p-4">
+	<div class="container">
+		<div class="article__post">
+			<form method="post">
+				<div class="row">
+					<div class="col-md-9 article__post_body border">
+						<div class="article__post_area py-3">
+							<div class="form-group">
+								<label for="title">Title</label>
+								<input type="text" class="form-control" placeholder="Input title">
+							</div>
+						   <div id="mytextarea">Hello, World!</div>
+						</div>
+						<div class="article__post_tag">
+							<div class="form-group">
+								<label for="tag">Tag</label>
+								<input type="text" class="form-control" placeholder="add tag">
+							</div>
+						</div>
+					</div>
+					<div class="col-md-3 article__post_aperance">
+						<div class="card">
+							<div class="card-header">Feature Images</div>
+							<div class="card-body p-0">
+								<img class="img-fluid" src="https://dummyimage.com/600x400/000/fff" alt="">
+							</div>
+							<div class="card-body text-center py-3">
+								<button class="btn btn-primary btn-block btn-sm">Set featured images</button>
+							</div>
+						</div>
+						<div class="card mt-3">
+							<div class="card-header">Categories</div>
+							<div class="card-body">
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
+									<label class="form-check-label" for="defaultCheck1">
+								    Default checkbox
+								  	</label>
+								</div>
+								<div class="form-check">
+									<input class="form-check-input" type="checkbox" value="" id="someCategories">
+									<label class="form-check-label" for="someCategories">
+								    Some Categories
+									</label>
+								</div>
+								<div class="form-check">
+								  	<input class="form-check-input" type="checkbox" value="" id="categories3">
+								  	<label class="form-check-label" for="categories3">
+								    Categories3
+								  	</label>
+								</div>
+							</div>
+						</div>
+						<div class="card mt-3">
+							<div class="card-header">
+								Publish
+							</div>
+							<div class="card-body">
+								<div class="d-flex justify-content-between">
+									<button class="btn btn-info btn-sm">Save Draft</button>
+									<button class="btn btn-success btn-sm">Publish</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			 </form>
+		</div>
+	</div>
+
+    <!-- <h1>Hello {{ controller_name }}! ✅</h1>
+
+    This friendly message is coming from:
+    <ul>
+        <li>Your controller at <code><a href="{{ 'src/Controller/ArticleNewController.php'|file_link(0) }}">src/Controller/ArticleNewController.php</a></code></li>
+        <li>Your template at <code><a href="{{ 'templates/article_new/index.html.twig'|file_link(0) }}">templates/article_new/index.html.twig</a></code></li>
+    </ul> -->
+</div>
+{% endblock %}

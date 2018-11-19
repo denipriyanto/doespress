@@ -14,57 +14,6 @@ section.dashboard {
 	height: 100%;
 }
 
-//Style header 
-.dashboard__header {
-	display: flex;
-	width: 100%;
-	padding: 0;
-	// background-color: $c_dark;
-	.dashboard__header_trigger_menu {
-		background-color: #0747A6;
-		text-align: right;
-		display: flex;
-		flex: 0 0 250px;
-		width: 250px;
-		justify-content: space-between;
-		align-items: center;
-		.dashboard__brand {
-			color: #fff;
-			font-size: 1.5rem;
-			text-transform: uppercase;
-			padding-left: 0.9rem;
-		}
-		.dashboard__logo {
-			padding: 1rem 0.9rem;
-		}
-	}
-	.dashboard__header_navigation {
-		width: 100%;
-		display: flex;
-		align-items: center;
-		justify-content: flex-end;
-		.dashboard__navigation {
-			margin-right: 0.9rem;
-			a.nav-link {
-				color: #fff;
-				padding: .5rem .3em;
-			}
-			.dropdown-item {
-				padding: 0.25em 1em;
-				font-size: 0.9rem;
-			}
-			.dropdown-toggle::after {
-				margin-left: 0.8em;
-				border-top: .4em solid;
-			    border-right: .4em solid transparent;
-			    border-left: .4em solid transparent;
-			}
-		}
-	}
-}
-
-
-
 // Syle content
 .dashboard__content_wrapper {
 	display: flex;
@@ -157,8 +106,8 @@ section.dashboard {
 			min-height: 100%;
 			align-items: stretch;
 			.page__content_menu {
-				flex: 0 0 351px;
-			    width: 351px;
+				flex: 0 0 250px;
+			    width: 250px;
 				border-right: 0.5px solid $c_dark;
 			}
 			.page__content_main {
@@ -166,5 +115,7 @@ section.dashboard {
 			}
 		}
 	}
-	
+	.article-new-wrapper {
+		width: 100%;
+	}	
 }
