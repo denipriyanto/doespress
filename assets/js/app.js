@@ -25,9 +25,5 @@ $('#articlePostSubmit').click( function(){
 	console.log(title);
 	console.log(tag);
 	console.log(res)
-
-
 	console.log(postbody);
-
-
-})
+});
