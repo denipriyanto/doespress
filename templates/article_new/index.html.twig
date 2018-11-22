@@ -4,6 +4,11 @@
 
 {% form_theme form 'bootstrap_4_layout.html.twig' %}
 
+{% block javascripts %}
+	<script src='https://devpreview.tiny.cloud/demo/tinymce.min.js'></script>
+	{{ encore_entry_script_tags('tinymce') }}
+{% endblock %}
+
 {% block body %}
 <style>
     .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
