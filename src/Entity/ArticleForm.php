@@ -37,7 +37,7 @@ class ArticleForm
 
     public function setTag($tag)
     {
-        $this->tag = $tag;
+        $this->tag = explode(' ',$tag);
     }
 
     public function getFeaturedImage()

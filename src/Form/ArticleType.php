@@ -10,6 +10,8 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
+use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 
 class ArticleType extends AbstractType
@@ -18,11 +20,20 @@ class ArticleType extends AbstractType
     {
         $builder
             ->add('title', TextType::class)
-            ->add('content', TextareaType::class,[
-                'attr' => ['class' => 'myclasstextarea'],
+            ->add('content', HiddenType::class,[
+                'attr' => ['class' => 'tinymce'],
             ])
             ->add('tag', TextType::class)
-            ->add('category', TextType::class)
+            ->add('category', ChoiceType::class, array(
+                'choices' => array(
+                    'Select categories' =>array(
+                        'Uncategorize' => 'uncategorize',
+                        'Hobby' => 'hobby',
+                        'Fishing' => 'Fishing',
+                    )
+                ),
+                'empty_data' => false,
+            ))
             ->add('featuredImage', FileType::class)
             ->add('save', SubmitType::class)
         ;

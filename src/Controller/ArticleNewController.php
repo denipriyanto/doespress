@@ -20,33 +20,13 @@ class ArticleNewController extends AbstractController
      */
     public function index(Request $request)
     {
-        $article = new ArticleForm();
-        $article->setTitle('Masukan title article');
-        $article->setContent('Masukan content');
-        $article->setTag('Masukan Tag disini');
-        $article->setCategory('Masukan category disini');
-        $article->setFeaturedImage('Pilih featured image');
-
-        $defaultData = array('data_class' => null);
-
-        $form = $this->createFormBuilder($defaultData)
-            ->add('title', TextType::class)
-            ->add('content', TextareaType::class,[
-                'attr' => ['class' => 'myclasstextarea'],
-            ])
-            ->add('tag', TextType::class)
-            ->add('category', TextType::class)
-            ->add('featuredImage', FileType::class)
-            ->add('save', SubmitType::class, array('label' => 'Create article', 'attr' => ['class' => 'btn-sm btn-block btn-primary']))
-            ->getForm();
-
-        // $form = $this->createForm(ArticleType::class);
-
+        $form = $this->createForm(ArticleType::class);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
             // data is an array with "name", "email", and "message" keys
             $data = $form->getData();
+            dd($form->getData());
         }
         return $this->render('article_new/index.html.twig', [
             'controller_name' => 'ArticleNewController',

@@ -119,3 +119,24 @@ section.dashboard {
 		width: 100%;
 	}	
 }
+
+
+section.page-login {
+	background-color: #ddd;
+	height: 100%;
+	width: 100%;
+	.login__area {
+		// height: 300px;
+		width: 400px;
+		background-color: $c_blue;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		margin-right: -50%;
+		transform: translate(-50%, -50%);
+		color: #fff;
+		.forger__pass {
+			margin: 20px 0;
+		}
+	}
+}
