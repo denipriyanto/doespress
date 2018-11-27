@@ -1,9 +1,16 @@
+//fonts 
+@import url('https://fonts.googleapis.com/css?family=Nunito');
+
 // Variable
 $c_red : #DB1936;
 $c_dark : #1E1E21;
 $c_blue : #0747A6 ;
 $c_darkblue: #073C8D;
 $c_active : #07357C;
+
+.ff__nn {
+	font-family: 'Nunito', sans-serif;
+}
 
 html, body {
 	height: 100%;
@@ -138,5 +145,48 @@ section.page-login {
 		.forger__pass {
 			margin: 20px 0;
 		}
+	}
+}
+
+.article__post {
+	.form-group-custom {
+		margin-bottom: 1rem;
+	}
+	input {
+		width: 100%;
+		border: none;
+		padding: 7px 15px;
+	}
+	*:focus {
+	    outline: none;
+	}
+	label.ff__nn {
+		font-size: 1.5rem;
+		margin: 0;
+	}
+	.tox {
+		.tox-toolbar {
+			border: none;
+			.tox-toolbar__group:not(:last-of-type) {
+				border: none;
+			}
+		}
+		.tox-edit-area {
+			border: none;
+		}
+	}
+	.btn__wrapper {
+		text-align: center;
+		button {
+			padding: 4px 40px;
+			border: none;
+			border-radius: 20px;
+		}
+	}
+}
+
+.thead__small {
+	tr th {
+		padding: 0.5rem 0.75rem;
 	}
 }

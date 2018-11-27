@@ -19,11 +19,15 @@ class ArticleType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('title', TextType::class)
+            ->add('title', TextType::class, [
+                'attr' => ['placeholder' => 'Add title here..']
+            ])
             ->add('content', HiddenType::class,[
                 'attr' => ['class' => 'tinymce'],
             ])
-            ->add('tag', TextType::class)
+            ->add('tag', TextType::class, [
+                'attr' => ['placeholder' => 'Add tag here..']
+            ])
             ->add('category', ChoiceType::class, array(
                 'choices' => array(
                     'Select categories' =>array(
@@ -34,7 +38,9 @@ class ArticleType extends AbstractType
                 ),
                 'empty_data' => false,
             ))
-            ->add('featuredImage', FileType::class)
+            ->add('featuredImage', FileType::class, [
+                'attr' => ['class' => 'form-custom-input']
+            ])
             ->add('save', SubmitType::class)
         ;
     }

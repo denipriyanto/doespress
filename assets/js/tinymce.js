@@ -5,7 +5,7 @@ tinymce.init({
     menubar: false,
     branding: false,
     statusbar: false,
-    height: 600,
+    height: 400,
     image_advtab: true,
     paste_data_images: true,
     plugins: [
