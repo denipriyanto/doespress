@@ -1,0 +1,6 @@
+{
+    "emmet.showSuggestionsAsSnippets": true,
+    "editor.snippetSuggestions": "top",
+    "editor.tabCompletion": true,
+    "emmet.triggerExpansionOnTab": true
+}

@@ -12,6 +12,10 @@ $c_active : #07357C;
 	font-family: 'Nunito', sans-serif;
 }
 
+.btn-action {
+	font-size: 0.8rem;
+}
+
 html, body {
 	height: 100%;
 	overflow-x: hidden;
@@ -189,4 +193,8 @@ section.page-login {
 	tr th {
 		padding: 0.5rem 0.75rem;
 	}
+}
+
+.contact__wrapper {
+	
 }

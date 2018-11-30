@@ -10,7 +10,7 @@ use Symfony\Component\HttpFoundation\Request;
 class LoginController extends AbstractController
 {
     /**
-     * @Route("/login", name="login")
+     * @Route("/logins", name="login")
      */
     public function index(Request $request)
     {
